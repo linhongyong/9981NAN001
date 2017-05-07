@@ -1,0 +1,197 @@
+p {
+  margin-bottom: 0px;
+}
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.pageContent_label {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+table {
+  width: 100%;
+  margin: auto auto;
+}
+th,
+td {
+  height: 32px;
+  /*border-top: 1px solid #BCD4E5;*/
+}
+.dateTable tr {
+  border-bottom: 1px solid #BCD4E5;
+}
+.dayTable tr {
+  border-top: 1px dotted #BCD4E5;
+}
+.dayTable tr:nth-child(odd) {
+  border-top: 1px solid #BCD4E5;
+}
+th {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  background-color: #ECF2F7;
+}
+.inText {
+  width: 85%;
+  background-color: #FFFFCC ;
+  padding: 1px;
+}
+.dayTable {
+  height: 300px;
+  overflow-y: scroll;
+  margin-top: 2px;
+  position: relative;
+}
+.dayTable th {
+  text-align: right;
+  padding: 5px;
+}
+.external-event {
+  width: 100%;
+  margin: 6px 0;
+  padding: 0;
+  cursor: default;
+  display: block;
+  color: #FFF;
+  font-size: 13px;
+  line-height: 28px;
+}
+.icon {
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+  line-height: 32px;
+  margin-right: 5px;
+  font-size: 15px;
+  border-right: 1px solid #FFF;
+}
+.labelContent {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.noSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  line-height: 10px;
+  cursor: s-resize;
+}
+.myLabel {
+  text-align: center;
+  width: 75%;
+  background-color: #5cb85c;
+  color: #fff;
+  cursor: default;
+  position: absolute;
+  height: 32px;
+  left: 15.5%;
+}
+/*我的习惯*/
+#myHabit {
+  width: 90%;
+  /*border-bottom: 1px solid #CCC;*/
+  margin: 20px auto;
+}
+.section_one {
+  text-align: center;
+  min-height: 49px;
+  padding-left: 18px;
+  color: #669fc7;
+  border: 1px solid #CCC;
+  border-bottom: 1px solid #DDD;
+}
+.section_one .habitName {
+  float: left;
+  text-align: left;
+  line-height: 48px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.section_one .daysCla {
+  display: inline-block;
+  line-height: 48px;
+  margin-right: 10%;
+  font-size: 24px;
+}
+.section_one .daysCla .days {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+}
+.section_one .actionIcons {
+  float: right;
+  display: inline-block;
+  line-height: 48px;
+  font-size: 18px;
+  padding: 0 14px;
+  /*a:nth-child(1){
+            font-size: 24px;
+        }
+        a:nth-child(2){
+            font-size: 24px;
+        }*/
+}
+.section_two {
+  clear: both;
+  padding: 12px 12px 0px;
+  border: 1px solid #CCC;
+  border-top: 0;
+  color: #3a87ad;
+}
+.section_two .habitAbout {
+  font-size: 14px;
+  border-radius: 0;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 8px 14px;
+}
+.section_two .footer {
+  padding: 3px 0px;
+}
+.section_two .footer .startTimeCla {
+  display: inline-block;
+  font-size: 14px;
+}
+.section_two .footer .actionIcons {
+  float: right;
+  display: inline-block;
+  font-size: 18px;
+}
+/*.section_two*/
+#addHabit {
+  float: right;
+  text-align: center;
+  background-color: #5bc0de;
+  display: inline-block;
+  line-height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+/**********************************/
+.myPlan {
+  width: 60%;
+  margin: auto auto;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.step_one,
+.step_two,
+.step_three {
+  border: 1px solid #ccc;
+}

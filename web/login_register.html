@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+    <link href="css/login_register.css" rel="stylesheet">
+</head>
+<body>
+<div class="backgrounds" id="backgrounds">
+    <div class="content" id="div_position">
+        <div class="loginReg_framework">
+            <form id="log_reg_form" method="post" name="loginForm" action="/">
+                <!-- 登录表单开始 -->
+                <div class="content2" id="login_form">
+                    <ul>
+                        <li><span id="login_msg" class="erroTip">错误信息提示处</span></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <input id="tid" name="name" type="text" class="text" value="您的用户名" /><br />
+                        </li>
+                    </ul>
+                    <ul id="pwd_p">
+                        <li><input type="" name="password" id="pwd" class="text" value="您的密码" /></li>
+                    </ul>
+                    <!-- 验证码获取的时候，点击刷新，需要不同的请求才会刷新，因此我们给一个时间参数，使请求每一时刻都不同，达到刷新验证码的目的 -->
+                    <ul id="identfy_all">
+                        <li>
+                            <span class="identifying">
+                                <img src="" width="100%" height="100%" onclick="">
+                            </span>
+                            <input type="text" name="code" id="ident" class="text identify" value="验证码" />
+                        </li>
+                    </ul>
+                    <br/>
+                    <input class="login_button" id="login_button" value="登  录" type="button"/>
+                    <div style="height: 20px"></div>
+                </div>
+                <!-- 登录表单结束-->
+
+
+                <!-- 注册表单开始-->
+                <div class="content2" id="register_form" style="display: none;">
+                    <ul class="regesits_input">
+                        <li><span id="regesits_msg" class="erroTip">错误信息提示处</span></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="text" name="username" id="username" class="text" placeholder="用户名" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="password" name="password" id="password" class="text" placeholder="密码" value=""/></li>
+                    </ul>
+                    <!--<ul class="regesits_input">
+                        <li><input type="text" name="usex" id="sex" class="text" placeholder="性别" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="tel" name="utelephone" id="telephone" class="text" placeholder="电话" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="email" name="uemail" id="email" class="text" placeholder="邮箱" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="text" name="uqq" id="uqq" class="text" placeholder="QQ" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="text" name="uwechat" id="wechat" class="text" placeholder="微信" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="date" name="ubirth" id="birth" class="text" placeholder="生日" value=""/></li>
+                    </ul>
+                    <ul class="regesits_input">
+                        <li><input type="text" name="ujob" id="job" class="text" placeholder="职业" value=""/></li>
+                    </ul>-->
+                    <br/>
+                    <input class="regist_button regesits_input" id="register_button" value="注册" type="button"/>
+                    <div style="height: 20px"></div>
+                </div>
+                <!-- 注册表单结束-->
+            </form>
+        </div>
+        <div class="regist_a" id="goRegister">
+            还没有帐号?<span class="texts cursors">马上注册</span>
+        </div>
+        <div class="login_a" id="goLogin" style="display: none;">
+            已经注册?<span class="texts cursors">马上登录</span>
+        </div>
+    </div><!--.content-->
+</div>
+
+<script>
+    /*************************检查用户名是否已经被注册******************************/
+   $("#uname").blur(function () {
+        var uname = $("#uname").val().trim();
+        $.ajax({
+            url: "",
+            type: "POST",
+            data: {
+                uname: uname,
+            },
+            dataType: "json",
+            success: function (result) {
+                 if (result.code == 1) {
+                    document.getElementById("regesits_msg").style.color="green";
+                    document.getElementById("regesits_msg").innerHTML="用户名可用";
+
+                } else {
+                    document.getElementById("regesits_msg").style.color="red";
+                    document.getElementById("regesits_msg").innerHTML="用户名已被注册";
+                }
+            }
+
+        })
+    })
+</script>
+<script src="js/nodepade/login_register.js"></script>
+</body>
+</html>
+<!--登录注册事件在.js的“登录注册模块”-->
