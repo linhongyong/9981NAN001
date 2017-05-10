@@ -1,0 +1,202 @@
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style: none;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.backgrounds {
+  background-color: #d3d3d3 ;
+  border: 1px solid #ccc;
+}
+.content {
+  margin: 10px auto;
+  font-size: 14px;
+  font-family: 微软雅黑;
+  text-decoration: none;
+  /*.loginReg_framework*/
+}
+.content .loginReg_framework {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /*.content2*/
+}
+.content .loginReg_framework .content2 {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+.content .loginReg_framework .content2 ul {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.content .loginReg_framework .content2 ul .text {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  font-family: 'Microsoft YaHei';
+  letter-spacing: 1px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1) inset;
+  border: solid 1px #ccc;
+  text-indent: 10px;
+  color: #aaa;
+}
+.content .loginReg_framework .content2 ul .identifying {
+  display: inline-block;
+  width: 38%;
+  height: 45px;
+  border-radius: 5px;
+}
+.content .loginReg_framework .content2 ul .identify {
+  width: 58%;
+  line-height: 40px;
+  float: right;
+}
+.content .loginReg_framework .content2:nth-child(0) {
+  margin-top: 20px;
+}
+.content .login_button,
+.content .regist_button {
+  display: block;
+  width: 85%;
+  height: 40px;
+  background-color: #5bc0de;
+  border: 1px #5bc0de solid;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.content .erroTip {
+  color: #5bc0de;
+  font-weight: 500;
+  width: 100%;
+  height: 25px;
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.content .regist_a,
+.content .login_a {
+  height: 32px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 13px;
+  font-family: 微软雅黑;
+}
+.content .cursors {
+  cursor: pointer;
+}
+.content .texts {
+  color: #5bc0de;
+  text-decoration: none;
+}
+/*content*/
+/*
+
+
+
+.rem_password{
+    width:320px;
+    line-height: 35px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top:2px;
+    color: #ffa800;
+    font-family: 微软雅黑;
+    text-decoration:none;
+    float:left;
+}
+*/
+/*
+!**********用合作网站账户直接登录**************!
+.centers{
+    margin:0 auto;
+}
+.hro{
+    border:1px #eaeaea solid;
+}
+.content_th{
+    color:#999798;
+    width:320px;
+    height:110px;
+    margin: 0 auto;
+    margin-top:15px; ;
+}
+.third_part{
+    width:320px;
+    height:auto;
+
+}
+.posit{
+    float:left;
+    margin-top: 20px;
+    text-decoration: none;
+    color:#999798;
+
+}
+
+.posit img{
+    display: inline-block;
+    float:left;
+    width:44px;
+    height:44px;
+    margin-left:25px;
+}
+
+.posit img:hover{
+    width:45px;
+    height:45px;
+    transform:0.5s;
+}
+
+
+
+.posit p{
+    display: inline-block;
+    width:60px;
+    height:20px;
+    margin-top: 2px;
+    margin-left:18px;
+    text-align: center;
+}
+
+.posit p:hover{
+    color:#000;
+}
+
+!***********注册input***!
+#register_form{
+    display: none;
+}
+.regesits_input{
+   !* *!
+
+}
+#button{
+    margin-top:10px;
+}
+.regesits_input:first-child{
+    margin-top:60px;
+    padding-top:20px;
+}
+
+
+
+
+
+
+
+*/

@@ -1,0 +1,179 @@
+
+@zone-size-left:30%;
+@zone-size-right:70%;
+.row{
+    margin: 0px;
+}
+.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,
+.col-xs-7,.col-xs-8, .col-xs-9,.col-xs-10,.col-xs-11.col-xs-12{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.clear{
+    clear: both;
+}
+ul,ol,li{
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+.planList{
+    position: absolute;
+    width: 100%;
+    padding:0px 10px;
+    z-index: 999;
+    color: #669fc7;
+    text-align: center;
+    .plans-block{
+        padding:5px 10px;
+        background-color: #d9edf7;
+        .planUl{
+            li{
+                border-bottom: 1px solid #fff;
+                line-height: 20px;
+            }
+        }
+    }
+    .addButton{
+        display:block;
+        border-radius: 5px;
+        padding: 5px auto;
+        background-color: #3a87ad;
+        color:#fff;
+        margin-top: 8px;
+        line-height: 30px;
+    }
+
+}
+.plansDownUp{
+    top: 0px !important;
+}
+.dragDown{
+    display: inline-block;
+    line-height: 42px;
+    width:42px;
+    text-align: center;
+    background-color: #5bc0de;
+    border-radius: 50%;
+    font-size:26px;
+    color: #fff;
+    margin-top: 30px;
+    margin-right: 30px;
+     float: right;
+    clear:both;
+}
+#myPlan{
+    width:100%;
+    padding: 10px;
+    margin: auto auto;
+    color: #669fc7;
+
+    dl{
+    }
+    dt{
+        position: relative;
+        font-size: 20px;
+        margin-bottom: 10px;
+        .section_header{
+            .section_name{
+                display: inline-block;
+               /* width:26%;*/
+            }
+            .resume_line{
+                padding-left: 20px;
+                display: inline-block;
+               /* width: 68%;*/
+                border-top-style:dotted;
+                border-top-width:  2px;
+                position: absolute;
+                top:14px;
+            }
+            a{
+                float:right;
+                font-size: 14px;
+                line-height: 28px;
+                /*width: 6%;*/
+                text-align: center;
+            }
+        }
+    }
+    dd{
+       /* padding: 20px 0px;*/
+        width: 100%;
+        margin:auto auto;
+       /* margin-left: 15%;*/
+
+    }
+    .what,.why{
+        dd{
+            .section_body{
+                text-indent:2em;
+                font-size: 14px;
+                border-radius: 0;
+                background-color: #d9edf7;
+                border-color: #bce8f1;
+                padding: 8px 14px;
+            }
+        }
+
+    }
+    .how{
+        .section_body{
+
+        }/*section_body*/
+    }/*how*/
+}
+@media (max-width: 579px){/*  手机  */
+    /*.header-pc{
+        display: none;
+    }
+    .header-mobile{
+        display: block;
+    }*/
+}
+@media (min-width: 580px){/*   pc   */
+    /*.header-pc{
+        display: block;
+    }
+    .header-mobile{
+        display: none;
+    }*/
+}
+@media(max-width: 399px)  {
+    dt{
+        .section_name{  width:24%;  }
+        .resume_line{  width: 72%;  }
+        a {  width: 4%;  }
+    }
+}
+@media(min-width: 400px) and (max-width: 479px)  {
+    dt{
+        .section_name{  width:22%;  }
+        .resume_line{  width: 74%;  }
+        a {  width: 4%;  }
+    }
+}
+@media (min-width: 480px) and (max-width: 767px)  {
+    dt{
+        .section_name{  width:16%;  }
+        .resume_line{  width: 80%;  }
+        a {  width: 4%;  }
+    }
+}
+@media (min-width: 768px) and (max-width: 999px){
+    dt{
+        .section_name{  width:7%;  }
+        .resume_line{  width: 90%;  }
+        a {  width: 3%;  }
+    }
+}
+@media (min-width: 1000px){
+    dt{
+        .section_name{  width:7%;  }
+        .resume_line{  width: 90%;  }
+        a {  width: 3%;  }
+    }
+}
+
+

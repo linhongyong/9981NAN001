@@ -1,0 +1,155 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="js/mobileDraggable.js"></script>
+    <link href="css/nodepade.css" rel="stylesheet">
+</head>
+<body>
+<!--<ul id="myTab" class="nav nav-tabs">
+    <li><a href="#myLabel" data-toggle="tab">我的安排</a></li>
+    <li><a href="#myHabit" data-toggle="tab" class="active" >我的坚持</a></li>
+    <li><a href="#myPlan"  data-toggle="tab" >我的计划</a></li>
+    <li><a href="#myBelief" data-toggle="tab" >我的信念</a></li>
+
+<div id="myTabContent" class="tab-content"></ul>-->
+
+<div id="myLabel">
+        <h2 style="text-align: center">It's your wonderful day</h2>
+        <table class="dateTable">
+            <tr>
+                <th></th>
+                <th style="height:10px;">
+                    <div class="form-group" style="margin:0px;">
+                        <input id="datep" name="date" class="form-control">
+                        <span id="inline"></span>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>all-day</th>
+                <td class="inText"></td>
+            </tr>
+        </table>
+        <div class="dayTable">
+            <table>
+                <tbody>
+                <tr><th>0am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>1am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>2am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>3am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>4am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>5am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>6am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>7am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>8am</th><td class="inText"></td></tr>
+                <tr><th></th><td class="inText"></td></tr>
+                <tr><th>9am</th><td class="inText"></td></tr>
+                </tbody>
+            </table>
+            <!--<c:forEach var="label" items="${labels}"  >
+                <div class='myLabel' style="top:${label.startTime*84}px;height:${label.totalTime*84}px; position:absolute;">
+                    <p class='labelContent' style='margin:0px;'>${label.content}</p>
+                    <p class='noSelect'><span >=</span></p>
+                </div>
+            </c:forEach>-->
+        </div><!--dayTable-->
+        <div class="dragEles">
+            <div class="external-event label-success ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 1
+            </div>
+            <div class="external-event label-info ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 2
+            </div>
+            <div class="external-event label-warning ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 3
+            </div>
+            <div class="external-event label-danger ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 4
+            </div>
+            <div class="external-event label-default ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 5
+            </div>
+            <div class="external-event label-primary ui-draggable">
+                <i class="icon fa fa-arrows"></i>My Event 6
+            </div>
+        </div>
+    </div><!--page-content-->
+   <!-- <div class="tab-pane fade" id="myPlan">
+        <div class="myPlan">
+            <h3>英语六级计划书</h3>
+            <div class="step_one">
+                <p>过六级计划</p>
+                <p>六级是最低要求，对以后找工作和自己自信心的增长也有很大的作用</p>
+                <p>要过六级的话你必须：背单词、</p>
+            </div>
+            <div class="step_two">
+                为什么
+            </div>
+            <div class="step_three">
+                怎么做
+            </div>
+        </div>
+    </div>-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Z先生，请输入您的备忘信息
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <textarea id="mycontent" name="content" class="form-control" placeholder="请输入..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteLabel" type="button" class="btn btn-default"
+                        data-dismiss="modal">删除
+                </button>
+                <!--  <input type="submit" value="submit"> -->
+                <button id="submitLabel" type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+</body>
+<!--<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>-->
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/nodepade_label.js"></script>
+<script>
+    $(document).ready(function(){
+    });
+</script>
+</html>

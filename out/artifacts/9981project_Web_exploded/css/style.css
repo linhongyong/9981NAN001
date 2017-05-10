@@ -1,0 +1,307 @@
+
+body{
+    background-color: #497590;
+}
+/*navbar*/
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #6090B6;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    width: 16px;
+    height: 16px;
+    border-color:#6090B6;
+}
+#logoCanvas{
+    display: block;
+    margin: 30px auto;
+}
+.shdow{
+    display: block;
+    margin: 10px auto;
+}
+
+/*fullpage*/
+.section h2 {
+    margin: 110px 0 40px;
+    font-size: 44px;
+}
+
+
+.section{
+    color: #707d8d
+}
+.section {
+    /*margin-top: 25px;*/
+    color: #707d8d;
+}
+.section p {
+    font-size: 19px;
+    line-height: 28px;
+}
+
+/*section 2*/
+.section-two h2 {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    top: 60px;
+}
+.section-two {
+    position: relative;
+    background-color: #293c55;
+    color: #fff;
+}
+/*section 3*/
+@media (max-width: 992px) and (min-width: 768px)
+{
+    .section-three h2 {
+        margin: 20px 0 20px 0;
+    }
+}
+
+
+/*section 4*/
+.section-four .device-wrap {
+    float: right;
+}
+.section-four .device {
+    display: block;
+    width: 90%;
+}
+
+.section-four h2 {
+    margin-top: 60px;
+}
+.section-four .text-wrap {
+    padding-left: 10%;
+    text-align: left;
+}
+.section-four .text-wrap-animate {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    animation: textAnimation .7s ease-out;
+    -moz-animation: textAnimation .7s ease-out;
+    -webkit-animation: textAnimation .7s ease-out;
+    -o-animation: textAnimation .7s ease-out;
+}
+@-webkit-keyframes textAnimation {
+    from {
+        -webkit-transform: translate(-300px,150px);
+        transform: translate(-300px,150px);
+    }
+    to {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+@-o-keyframes imgAnimation {
+    from {
+        -webkit-transform: translateX(-300px);
+        transform: translateX(-300px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+@-moz-keyframes imgAnimation {
+    from {
+        -webkit-transform: translateX(-300px);
+        transform: translateX(-300px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+@keyframes imgAnimation {
+    from {
+        -webkit-transform: translate(-300px,150px);
+        transform: translate(-300px,150px);
+    }
+    to {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+
+
+/*section 4*/
+.section-four .device-wrap-animate {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    animation: imgAnimation .7s ease-out;
+    -moz-animation: imgAnimation .7s ease-out;
+    -webkit-animation: imgAnimation .7s ease-out;
+    -o-animation: imgAnimation .7s ease-out;
+}
+@-webkit-keyframes imgAnimation {
+    from {
+        -webkit-transform: translate(500px,150px);
+        transform: translate(500px,150px);
+    }
+    to {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+@-o-keyframes imgAnimation {
+    from {
+        -webkit-transform: translateX(500px);
+        transform: translateX(500px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+@-moz-keyframes imgAnimation {
+    from {
+        -webkit-transform: translateX(500px);
+        transform: translateX(500px);
+    }
+    to {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+}
+@keyframes imgAnimation {
+    from {
+        -webkit-transform: translate(500px,150px);
+        transform: translate(500px,150px);
+    }
+    to {
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+
+}
+
+
+
+
+/*section 5*/
+
+.section-five{
+    text-align: center;
+}
+.section-five p {
+    width: 80%;
+    margin: 0 auto 30px;
+}
+
+.section-five .list {
+    height: 300px;
+    line-height: 300px;
+}
+.section-five li {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #b7c4d4;
+}
+.section-five img {
+    width: 8%;
+    -webkit-border-radius: 150px;
+    border-radius: 150px;
+    border: 1px solid #b7c4d4;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.section-five .cur-item {
+    width: 12%;
+    margin: 0 6px;
+    -webkit-border-radius: 200px;
+    border-radius: 200px;
+    border-color: #7fccf2;
+    -webkit-box-shadow: 0 0 10px #b7c4d4;
+    box-shadow: 0 0 10px #b7c4d4;
+}
+
+/*section 6*/
+.section-six .container-six {
+    padding: 120px 0 60px;
+    text-align: center;
+    background-color: #fff;
+}
+.section-six h2 {
+    font-size: 19px;
+    line-height: 30px;
+    margin: 0;
+}
+.section-six .start-btn {
+    display: block;
+    margin: 40px auto;
+    width: 210px;
+    line-height: 46px;
+    font-size: 21px;
+    text-decoration: none;
+    background-color: #5CB6E3;
+    color: #fff;
+}
+
+/*section 6 footer*/
+#footer {
+    padding: 35px 5%;
+    font-size: 12px;
+    text-align: left;
+    background-color: #2a3c54;
+    color: #fff;
+}
+#footer .product-list, #footer .echarts-product, #footer .contact-list, #footer .more {
+    float: left;
+    width: 30%;
+}
+#footer h2 {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+}
+#footer ul, #footer li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+#footer .more {
+    width: 10%;
+}
+#footer .product-list a {
+    color: #5b8b95;
+}
+#footer .copyrights {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    clear: left;
+}
+#footer a {
+    line-height: 22px;
+    color: #fff;
+}
