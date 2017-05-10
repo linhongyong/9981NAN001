@@ -1,19 +1,14 @@
-/**
- * Created by Administrator on 2017/3/29.
- */
 // jQuery UI draggable 适配移动端
 
 var moveFlag = 0; // 是否移动的flag
 // /iPad|iPhone|Android/.test( navigator.userAgent ) &&
 (function ($) {
     var proto = $.ui.mouse.prototype, _mouseInit = proto._mouseInit;
-    $.extend(proto,
-        {
+    $.extend(proto, {
         _mouseInit: function () {
             this.element.bind("touchstart." + this.widgetName, $.proxy(this, "_touchStart"));
             _mouseInit.apply(this, arguments);
-        },
-        _touchStart: function (event) {
+        }, _touchStart: function (event) {
             this.element.bind("touchmove." + this.widgetName, $.proxy(this, "_touchMove")).bind("touchend." + this.widgetName, $.proxy(this, "_touchEnd"));
             this._modifyEvent(event);
             $(document).trigger($.Event("mouseup"));
@@ -23,19 +18,17 @@ var moveFlag = 0; // 是否移动的flag
             //return false;
 
             //--------------------touchStart do something--------------------
-            /*console.log("i touchStart!");*/
+            console.log("i touchStart!");
 
-        },
-        _touchMove: function (event) {
+        }, _touchMove: function (event) {
             moveFlag = 1;
             this._modifyEvent(event);
             this._mouseMove(event);
 
             //--------------------touchMove do something--------------------
-            /*console.log("i touchMove!");*/
+            console.log("i touchMove!");
 
-        },
-        _touchEnd: function (event) {
+        }, _touchEnd: function (event) {
             // 主动触发点击事件
             if (moveFlag == 0) {
                 var evt = document.createEvent('Event');
@@ -47,7 +40,7 @@ var moveFlag = 0; // 是否移动的flag
             moveFlag = 0;
 
             //--------------------touchEnd do something--------------------
-           /* console.log("i touchEnd!");*/
+            console.log("i touchEnd!");
 
         }, _modifyEvent: function (event) {
             event.which = 1;
