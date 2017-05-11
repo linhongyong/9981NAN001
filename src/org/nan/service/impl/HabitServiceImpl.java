@@ -1,27 +1,22 @@
 package org.nan.service.impl;
 
 
-import org.nan.dao.HabitDao;
-import org.nan.entities.Habit;
-import org.nan.service.BaseService;
+import org.nan.entities.Action;
 import org.nan.service.HabitService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Transactional(propagation = Propagation.REQUIRED)
 @Service
-public class HabitServiceImpl extends BaseServiceImpl<Habit> implements HabitService  {
+public class HabitServiceImpl extends BaseServiceImpl<Action> implements HabitService  {
 	
 	/*@Autowired
 	private HabitDao mIHabitDao;
 
 	@Transactional(propagation= Propagation.REQUIRED)
 	@Override
-	public boolean add(Habit habit) {
+	public boolean add(Action habit) {
 		return mIHabitDao.save(habit);
 	}
 	
@@ -33,19 +28,19 @@ public class HabitServiceImpl extends BaseServiceImpl<Habit> implements HabitSer
 	
 	@Transactional(propagation= Propagation.REQUIRED)
 	@Override
-	public boolean update(Habit habit) {
+	public boolean update(Action habit) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public Habit getOne(Integer id) {
+	public Action getOne(Integer id) {
 		return mIHabitDao.getById(id);
 	}
 	@Transactional(readOnly=true)
 	@Override
-	public List<Habit> getAll() {
-		List<Habit> allHabits = mIHabitDao.getAllHabits();
+	public List<Action> getAll() {
+		List<Action> allHabits = mIHabitDao.getAllHabits();
 			return allHabits;
 	}
 

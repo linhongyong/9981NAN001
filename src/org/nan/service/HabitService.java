@@ -1,17 +1,15 @@
 package org.nan.service;
 
 
-import java.util.List;
+import org.nan.entities.Action;
 
-import org.nan.entities.Habit;
-
-public interface HabitService  extends BaseService<Habit>{
+public interface HabitService  extends BaseService<Action>{
 	
-/*	boolean add(Habit habit);
+/*	boolean add(Action habit);
 	boolean delete(Integer id);
-	boolean update(Habit habit);
-	Habit getOne(Integer id);
-	List<Habit> getAll();
+	boolean update(Action habit);
+	Action getOne(Integer id);
+	List<Action> getAll();
 	boolean daysUp(Integer id);
 	boolean daysDown(Integer id);*/
 

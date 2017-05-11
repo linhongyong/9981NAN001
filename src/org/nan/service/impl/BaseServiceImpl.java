@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -14,6 +16,7 @@ import java.util.List;
 /**
  * Created by Watermelon_R on 2017/5/5.
  */
+@Transactional(propagation = Propagation.REQUIRED)
 @Service("baseService")
 public class BaseServiceImpl<T> implements BaseService<T> {
 

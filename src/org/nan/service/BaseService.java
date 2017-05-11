@@ -1,7 +1,5 @@
 package org.nan.service;
 
-import org.nan.entities.Habit;
-
 import java.util.List;
 
 /**

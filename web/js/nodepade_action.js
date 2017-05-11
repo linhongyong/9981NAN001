@@ -204,6 +204,7 @@ function editHabit(e) {
     /*删除任务*/
     $(".actions").on("click",".header a[data-action=close]",deleteAction);
     function deleteAction(e) {
+        console.log("asd");
         var id=$(this).parents(".action").find(".actionNo").val();
         if(deleteActionById(id)){
             $(this).parents(".action").remove();//显示

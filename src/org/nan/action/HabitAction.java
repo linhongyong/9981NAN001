@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ModelDriven;
 import net.sf.json.JSONObject;
 
 import org.apache.struts2.interceptor.ServletResponseAware;
-import org.nan.entities.Habit;
+import org.nan.entities.Action;
 import org.nan.service.HabitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -15,7 +15,6 @@ import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.SocketPermission;
 import java.util.Date;
 import java.util.List;
 
@@ -30,11 +29,11 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @Scope("prototype")
-public class HabitAction extends ActionSupport implements ModelDriven<Habit>,ServletResponseAware {
+public class HabitAction extends ActionSupport implements ModelDriven<Action>,ServletResponseAware {
 	private static final long serialVersionUID = 1L;
 	
 	//通过ModelDriven封装前台数据
-	private Habit habit;
+	private Action habit;
 	
 	@Autowired
 	private HabitService habitService;
@@ -59,7 +58,7 @@ public class HabitAction extends ActionSupport implements ModelDriven<Habit>,Ser
 	public void getAllHabits(){
 		try {
 			PrintWriter out = this.response.getWriter();
-			List<Habit> all = habitService.getAll();
+			List<Action> all = habitService.getAll();
 			JSONObject obj = new JSONObject();
 			if(all != null && all.size()>0){
 				all.forEach(e->{
@@ -79,8 +78,8 @@ public class HabitAction extends ActionSupport implements ModelDriven<Habit>,Ser
 	}
 	
 	@Override
-	public Habit getModel() {
-		habit = new Habit();
+	public Action getModel() {
+		habit = new Action();
 		return habit;
 	}
 

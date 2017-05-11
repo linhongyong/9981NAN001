@@ -17,22 +17,24 @@ import javax.persistence.Transient;
 
 
 @Entity
-@Table(name="t_habit")
+@Table(name="t_action")
 @DynamicInsert(true)
 @DynamicUpdate(true)
-public class Habit implements Serializable {
+public class Action implements Serializable {
 	private Integer id;   //记录id
 	private String name;
 	private Integer days;
+	private Integer wdays;
 	private String about;
 	private Date startTime;
+	private Date endtTime;
+	private Integer style;
 	
-	
-	public Habit() {
+	public Action() {
 		super();
 	}
-	public Habit(Integer id, String name, Integer days, String about,
-			Date startTime) {
+	public Action(Integer id, String name, Integer days, String about,
+				  Date startTime) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -79,7 +81,7 @@ public class Habit implements Serializable {
 	@Transient
 	@Override
 	public String toString() {
-		return "Habit [id=" + id + ", name=" + name + ", days="
+		return "Action [id=" + id + ", name=" + name + ", days="
 				+ days + ", about=" + about + ", startTime=" + startTime + "]";
 	}
 
